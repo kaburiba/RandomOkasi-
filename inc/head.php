@@ -8,8 +8,3 @@
     <meta name="description" content="<?php echo $description ?? '説明'; ?>"
     <title><?php echo $title ?? 'タイトル'; ?></title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-</body>
-</html>
