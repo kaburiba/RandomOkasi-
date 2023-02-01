@@ -9,7 +9,7 @@
 </head>
 <body id="login">
     <div class="contents flex-container">
-        <a href="toppage.css" class="prev_button">←</a>
+        <a href="toppage.php" class="prev_button">←</a>
         <h2 class="login">ログイン</h2>
         <!--エラーが出たらここに書く⇩-->
         <p class="notes">※アカウントが存在しないかまたはパスワードが違います</p>
