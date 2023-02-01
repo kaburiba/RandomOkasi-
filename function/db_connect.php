@@ -1,29 +1,22 @@
 <?php
-    //ユーザー名
-    $user = "root";
-    //パスワード
-    $pass = "";
-    //データベース名
-    $database = "snackdb";
-    //サーバー
-    $server = "localhost:3308";
+    require __DIR__ . '/vendor/autoload.php';
+    function connect()
+    {
+        //mysqlデータベースへの接続
+        try {
+            $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+            $dotenv->load();
 
-    //DSN文字列の生成
-    $dsn = "mysql:host={$server};dbname={$database};charset=utf8";
+            $dbHost = $_ENV['DB_HOST'];
+            $dbUsername = $_ENV['DB_USERNAME'];
+            $dbPassword = $_ENV['DB_PASSWORD'];
+            $dbDatabase = $_ENV['DB_DATABASE'];
 
-    //mysqlデータベースへの接続
-    try {
-        //PDOのインスタンスを作成し、DBへ接続する
-        $pdo = new PDO( $dsn, $user, $pass );
-        //プリペアドステートメントのエミュレーションを無効化
-        $pdo -> setAttribute( PDO::ATTR_EMULATE_PREPARES,false );
-        //例外がスローされる設定にする
-        $pdo -> setAttribute( PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION );
-        // echo "データベースに接続しました";
-        // echo '<br>';
-    } catch( Exception $e ) {
-        //エラー時の処理
-        echo "DB接続エラー";
-        echo $e -> getMessage();
-        exit();
+            $db = new PDO("mysql:dbname={$dbDatabase}, host={$dbHost}, charset=utf8, {$dbUsername}, {$dbPassword}");
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        } catch (PDOException $Exception) {
+            die('DB接続エラー: ' . $Exception->getMessage());
+        }
+        return $db;
     }
