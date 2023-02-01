@@ -13,7 +13,9 @@
         <h1 class="catchphrase">お菓子と幸せを届ける</h1><br>
         <p class="subphrase">毎日頑張ってるあなたやご友人、ご家族に素朴でありながら一息つけるものを...</p><br>
         <div class="button-container">
-            <button class="login-button">ログイン</button>
+            <button class="login-button" onclick="location.href='login.php'">
+                ログイン
+            </button>
             <button class="guest-login-button">ログインせずに始める</button>
         </div>
     </div>

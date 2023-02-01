@@ -18,13 +18,13 @@
 <body id="login">
 
     <div class="contents flex-container">
-        <a href="toppage.php" class="prev_button">←</a>
+        <a href="top.php" class="prev_button">←</a>
         <h2 class="login">ログイン</h2>
 
         <!--エラーが出たらここに書く⇩-->
         <p class="notice"><?php echo $error_message ?></p>
 
-        <form action="loginpage.php">
+        <form action="login.php">
             <div class="login_form">
                 <div class="mail_box">
                     <input type="text" placeholder="E-mail" name="mail">
