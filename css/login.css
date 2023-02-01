@@ -55,7 +55,7 @@ body{
         flex-direction:column;
 
     }
-    .notes{
+    .notice{
         color: red;
         text-align: center;
         font-size: 12px;
