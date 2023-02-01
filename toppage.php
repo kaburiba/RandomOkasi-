@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="flex-container">
-        <img src="img_show/Assorted.png" class="top_img" alt="おかしのソートボックスの画像">
+        <img src="images/Assorted.png" class="top_img" alt="おかしのソートボックスの画像">
     </div>
 
 </div>
