@@ -20,6 +20,14 @@ session_start();
     if(isset($_SESSION['error_mail'])){
         echo $_SESSION['error_mail'];
     }
+
+    if(isset($_SESSION['error_rule'])){
+        echo $_SESSION['error_rule'];
+    }
+
+    if(isset($_SESSION['error_policy'])){
+        echo $_SESSION['error_policy'];
+    }
 ?>
 <html>
     <head>
@@ -51,6 +59,10 @@ session_start();
         <option value="8">80代</option>
         <option value="9">90代以上</option>
     </select><br>
+    <!-- <input type="hidden" name="rule" value="0"> -->
+    <input type="checkbox" name="rule" value="1"><a href="#">利用規約</a>に同意します。<br>
+    <!-- <input type="hidden" name="policy" value="0"> -->
+    <input type="checkbox" name="policy" value="1"><a href="#">プライバシーポリシー</a>に同意します。<br>
     <input type="submit" value="登録">
 </form>
 </html>

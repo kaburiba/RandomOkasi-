@@ -13,6 +13,10 @@ $postcode = $_POST['postcode'];
 $address = $_POST['address'];
 $gender_id = $_POST['gender_id'];
 $generation_id = $_POST['generation_id'];
+// $rule = 0;
+// $policy = 0;
+$rule = $_POST['rule'];
+$policy = $_POST['policy'];
 
 $str = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPUQRSTUVWXYZ';
 $salt = substr(
@@ -62,8 +66,28 @@ if($count['email'] === $email){
     $_SESSION['error_mail'] = "そのメールアドレスは既に登録されています。";
     // header('Location:registerform.php');
 }
+
+echo "<pre>";
+var_dump($rule);
+echo "</pre>";
+echo "<pre>";
+var_dump($policy);
+echo "</pre>";
+if($rule != 1){
+    $error = true;
+    $_SESSION['error_rule'] = "利用規約に同意してください。";
+    // header('Location:registerform.php');
+    // exit;
+}
+
+if($policy != 1){
+    $error = true;
+    $_SESSION['error_policy'] = "プライバシーポリシーに同意してください。";
+}
+
 if($error){
     header('Location:registerform.php');
+    exit;
 }
 
 $sql = "INSERT INTO users (email,password,salt,name,postcode,address,gender_id,generation_id)
