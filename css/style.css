@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #FAFFF0;
+}
+
+header {
+    background: #FFFFFF;
+    /*border: 1px solid #000000;*/
+    padding: 10px 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 1px 4px #333333);
+}
+
+.title-container > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 0;
+}
+.nav-list > li {
+    list-style: none;
+}
+.nav-list > li > a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background:
+            linear-gradient(currentColor 0 0) var(--d, 0) 0,
+            linear-gradient(currentColor 0 0) 0 var(--d, 0),
+            linear-gradient(currentColor 0 0) var(--p, 100%) 100%,
+            linear-gradient(currentColor 0 0) 100% var(--p, 100%);
+    background-size: var(--d, 0) 2px, 2px var(--d, 0);
+    background-repeat: no-repeat;
+    transition: 0.5s, background-position 0s 0.5s;
+}
+.global-nav a:hover {
+    --d: 100%;
+    --p: 0%;
+}
+
+
+.account-container {
+    position: relative;
+}
+.account-menu {
+    position: absolute;
+    background-color: #cccccc;
+    width: 200px;
+    right: 0;
+    display: none;
+}
+.account-menu:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #cccccc;
+}
+
+.account-icon:hover + .account-menu,
+.account-menu:hover{
+    display: list-item;
+}
+
+.menu-item {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.menu-item > a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000000;
+}
+.menu-item:hover {
+    background: #eeeeee;
+    border-bottom: 1px solid #333333;
+    transition: 500ms;
+}
+
+.menu-item > .logout {
+    color: #FF0000;
+}
+
