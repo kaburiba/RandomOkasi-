@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="flex flex-item img_container">
-        <img src="img_show/Assorted.png" class="top_img" alt="おかしのソートボックスの画像">
+        <img src="img/Assorted.png" class="top_img" alt="おかしのソートボックスの画像">
     </div>
 </div>
 
