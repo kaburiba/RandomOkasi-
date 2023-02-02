@@ -29,11 +29,10 @@
                 <div class="pw_box">
                     <input type="password" placeholder="Password" name="pw">
                 </div>
-                <input type="submit" value="ログイン">
-            </form>
-            <div >
-                <p>アカウントをお持ちでない方は<a href="#">コチラ</a></p>
-            </div>
+               <input type="submit" value="ログイン">
+        </form>
+        <div class="transition_login">
+            <p>アカウントをお持ちでない方は<a href="register.php">コチラ</a></p>
         </div>
     </div>
 
