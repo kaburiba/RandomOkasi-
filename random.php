@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="title">ランダム</h1>
-    <div class="search">
+    <div class="random">
     <h4>抽選する個数</h4>
     <div class="num">
     <input type="number" name="ran_num" class="ran_num">
