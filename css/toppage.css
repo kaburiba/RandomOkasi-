@@ -1,0 +1,66 @@
+body{
+    background-color:#FAFFF0;
+}
+
+.top_img{
+    width: 754px;
+    height: 877px;
+}
+.flex {
+    display: flex; /*横並び*/
+  }
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin:0;
+    padding: .8em 2em;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffb813;
+    color:black;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.login-button:hover {
+    background-color: #efa803;
+}
+.flex-container{
+        width: 50%;
+}
+.contents{
+    padding: 70px;
+
+}
+.catchphrase{
+    font-size:70px;
+}
+.subphrase{
+    font-size: 35px;
+    width: 78%;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px 0;
+}
+.guest-login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin:0;
+    padding: .8em 2em;
+    border: none;
+    border-radius: 25px;
+    background-color: #DFDFDF;
+    color:black;
+    font-weight: 600;
+    font-size: 1em;
+}
+.guest-login-button:hover {
+    background-color: #B5B5B5;
+}
